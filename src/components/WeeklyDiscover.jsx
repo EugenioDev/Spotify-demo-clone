@@ -4,15 +4,10 @@ import { useDataLayerValue } from "../DataLayer";
 import Moment from 'react-moment';
 import 'moment/locale/it';
 
-import SpotifyWebApi from "spotify-web-api-js";
-
-
-
 
 function WeeklyDiscover() {
  
   const [{ discover_weekly }, dispatch] = useDataLayerValue();
-  console.log(discover_weekly)
 
   return (
     <div className="">
@@ -41,10 +36,6 @@ function WeeklyDiscover() {
         </thead>
         <tbody >
           { discover_weekly && discover_weekly?.tracks.items.map((item) => (
-            //Da sistemare passando props discover_weekly
-            // <>
-            //  <WeeklySong track={item}/>
-            // </>
           <tr className="hover:bg-gray-600/50 text-white text-xs cursor-pointer" key={item.track?.id} >
             <td className="w-[50px]">
               <PlayCircleIcon className="w-6 h-6"/>

@@ -9,9 +9,6 @@ export const initialState = {
   categories: [],
   savedTrack: null,
   discover_weekly: null,
-
-  itemm: null,
-  playingg: false
 };
 
 // Action : la possibiità di manipolare lo stato iniziale.
@@ -42,16 +39,6 @@ const reducer = (state, action) => {
         ...state,
         discover_weekly: action.discover_weekly,
       };
-      case "SET_ITEM":
-        return {
-          ...state,
-          itemm: action.itemm,
-        };
-        case "SET_PLAYING":
-          return {
-            ...state,
-            playingg: action.playingg,
-          };
     default:
       return state;
   }
